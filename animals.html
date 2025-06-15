@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mental Wealth | Animals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style/global.css">
 </head>
 <body>
@@ -16,14 +17,15 @@
             </ul>
         </nav>
     </header>
+
+
   <main>
     <h3>Support Animals</h3>
-    <figure>
       <img src="images/dogs.png.jpg" alt="Therapy dog" width="500" style="float: none;">
-      <figcaption>Meet our buddies! - Available for Fall 2024</figcaption>
-    </figure>
+
+    <section class="Whythishelps">
     <h3>Why we believe that emotional support animals are important!</h3>
-    <section id="Whythishelps">
+    >
         <ul>
             <li>Emotional Stability:
                 Support animals provide comfort during stressful times like exams, homesickness, or social anxiety, helping students regulate their emotions more effectively.
@@ -43,6 +45,32 @@
             </li>
             
         </ul>
+     </section>
+
+     <section class="grid">
+      <div class="box">Golden Retriever - Calm & Friendly</div>
+      <div class="box">Labrador - Great with Crowds</div>
+      <div class="box">Rabbit - Quiet and Soft</div>
+      <div class="box">Cat - Independent & Affectionate</div>
+    </section>
+    
+     <section class="contact">
+       <h2>Interested in Adoption?</h2>
+       <form>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="animal">Which animal are you interested in?</label>
+          <input type="text" id="animal" name="animal" required />
+
+          <label for="reason">Why do you want to adopt?</label>
+          <textarea id="reason" name="reason" rows="4"></textarea>
+
+          <button type="submit">Submit Adoption Request</button>
+        </form>
     </section>
 
     
