@@ -27,6 +27,12 @@ section {
   margin-bottom: 50px;
 }
 
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
 /*  HEADER + NAV  */
 header {
   display: flex;
@@ -41,7 +47,6 @@ header {
 header img {
   max-width: 100px;
   height: auto;
-  float: left;
 }
 
 nav ul {
@@ -98,13 +103,6 @@ nav a.active {
 
 .hero-text {
   max-width: 400px;
-}
-
-.hero img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 /*  "HOW IT WORKS" SECTION  */
@@ -176,6 +174,13 @@ tr:nth-child(even) {
   }
 }
 
+/* Grid layout for large screens */
+@media (min-width: 790px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
 /*  FORM STYLES */
 form {
   display: flex;
@@ -217,20 +222,13 @@ textarea:focus {
   outline-offset: 2px;
 }
 
-/*IMAGES*/
-img {
-  float: right;
-  margin-left: 10px;
-  margin-bottom: 30px;
-}
-
-/* PSEUDO-ELEMENTS*/
+/* PSEUDO-ELEMENTS */
 .intro::first-letter {
   font-size: 24pt;
   color: green;
 }
 
-/*FOOTER*/
+/* FOOTER */
 footer {
   background-color: rgb(1, 50, 1);
   text-align: center;
@@ -238,7 +236,7 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
   padding-top: 100px;
-  color: white
+  color: white;
 }
 
 footer a {
@@ -248,4 +246,25 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* SKIP LINK */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  font-weight: bold;
 }
